@@ -5,9 +5,9 @@ name: Start Lottery
 
 on:
   # Triggers the workflow at 09:00 on Friday.
-  # schedule:
-  #  - cron: "0 9 * * 5"
- workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 5"
+ #workflow_dispatch:
 
 jobs:
   build:
