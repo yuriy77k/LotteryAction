@@ -41,8 +41,6 @@ async function main() {
     try {
         CurrentLotteryId = await SoyLottery.methods.viewCurrentLotteryId().call();
         console.log("CurrentLotteryId: ",CurrentLotteryId);
-        sendMessageAndExit("CurrentLotteryId: " + CurrentLotteryId);
-        return;
         var LotteryData = await SoyLottery.methods.viewLottery(CurrentLotteryId).call();
         if (LotteryData.status == 1 && LotteryData.endTime < currentTime) {
             console.log("close lottery");
